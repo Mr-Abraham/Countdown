@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Text', sans-serif;
+    box-sizing: border-box;
+}
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color:hsl(234, 17%, 12%);
+    background-size: contain;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    width: 90vw;
+    height: auto;
+    text-align: center;
+}
+.container .head{
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: .71em;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    line-height: 1.6;
+}
+.container img{
+    position: absolute;
+   max-width: 90%;
+    z-index: -99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content{
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+}
+section{
+    border: 1px solid hsl(345, 95%, 68%);
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    padding: .2rem;
+    /* background: hsl(212, 18%, 19%) */
+    background: transparent;
+}
+section h1{
+    color: hsl(345, 95%, 68%);
+    font-size: .98rem;
+    font-weight:bolder;
+}
+section p{
+    color: hsl(237, 18%, 59%);
+    font-weight: 100;
+    font-size: .5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: .5rem;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: .5em;
+}
+.social img:hover{
+filter:invert(1)
+}
+
+@media (min-width:600px){
+    body{
+        background-size: contain;
+        background-position: bottom;
+    }
+    .container .head{
+        margin-bottom: 5em;
+        font-size: 1.3em;
+    }
+    section{
+        padding: 1rem;
+        height: 25vh;
+        margin: 0 1em;
+    }
+    section h1{
+ font-size: 2.5em;
+ padding: .51em 1.5em;
+    }
+    section p{
+        font-size: .81em;
+    }
+    .social{
+        gap: 2em;
+    }
+
+}
